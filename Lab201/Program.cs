@@ -1,6 +1,6 @@
 using System;
 
-namespace Lab2
+namespace Lab201
 {
 	class MainClass
 	{
@@ -15,18 +15,21 @@ namespace Lab2
 			stds[4] = new Student ("s4","57004");
 			stds[5] = new Student ("s5","57005",1993);
 			stds[6] = new Student ("s6","57006");
+          
 
 			Console.WriteLine ("\n--- Initial Students' state ---");
 			foreach (Student s in stds)
-				Console.WriteLine (s);
+			Console.WriteLine (s);
 
 			Console.WriteLine ("\n--- Playing with s4, s5, s6 objects ---");
 			stds [4].Name = "Mario";
 			stds [5].YearOfBirth = 1900;
 			stds [6].isActive = false;
 			for (int i = 4; i < stds.Length; i++)
-				Console.WriteLine (stds [i]);
-
-		}
+			Console.WriteLine (stds [i]);
+            
+        }
+      
 	}
+      
 }
