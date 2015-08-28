@@ -13,7 +13,7 @@ Creates Course class in a separate file, e.g. "Course.cs", and implements it to 
 - Methods: 
 	ToString(): display object state in specify format (see expected output)
 
-
+	 
 # Testing your class:
 
 After you finish your "Course class", you can test your class with the provided "Program.cs" file.
