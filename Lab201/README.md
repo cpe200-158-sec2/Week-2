@@ -19,7 +19,7 @@ After you finish your "Student class", you can test your class with the provided
 The result should be similar to the output given as follows:
 
 
-# Expected Output:
+# Expected Output: HhHh
 
 --- Initial Students' state ---
 [Student: John Doe (Unknown), age=20, is NOT active student]
