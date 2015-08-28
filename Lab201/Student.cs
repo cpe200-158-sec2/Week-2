@@ -21,7 +21,7 @@ namespace Lab2
             set {
                 if (value < 1950 || value > 2000)
                     Console.WriteLine("error try setting invalid year-of-birth value!");
-                else YearOfBirth = value;
+                else _YearOfBirth = value;
             }
         }
         public bool isActive { get; set; }
