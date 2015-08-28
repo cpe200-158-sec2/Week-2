@@ -41,6 +41,8 @@ namespace Lab2
 			cpe453.MaxStudents = 20;
 			Console.WriteLine (cpe453);
 
+            Console.ReadKey();
+
 		}
 	}
 }
