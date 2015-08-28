@@ -18,7 +18,7 @@ namespace Lab2
 
 			Console.WriteLine ("\n--- Initial Students' state ---");
 			foreach (Student s in stds)
-				Console.WriteLine (s);
+				Console.WriteLine (s); 
              
 			Console.WriteLine ("\n--- Playing with s4, s5, s6 objects ---");
 			stds [4].Name = "Mario";
