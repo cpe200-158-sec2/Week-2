@@ -1,6 +1,6 @@
 using System;
 
-namespace Lab2
+namespace Lab202
 {
 	class MainClass
 	{
@@ -37,7 +37,7 @@ namespace Lab2
 			Console.WriteLine ("\n--- playing with cpe453 object ---");
 			cpe453.Name = "Digital Image Processing";
 			cpe453.CourseID = "261453";
-			cpe453.Lecturer = "Sansanee";
+			cpe453.Lecture = "Sansanee";
 			cpe453.MaxStudents = 20;
 			Console.WriteLine (cpe453);
 
