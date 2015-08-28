@@ -83,7 +83,17 @@ namespace Lab201
 
         public override string ToString()
         {
-            string k = "[Student: " + Name + "(" + Id + ")" + "," + YearOfBirth + " " + isActive + " student ]";
+            string isActive = "";
+            if (_active == true)
+            {
+                isActive = "Active";
+            }
+            else
+            {
+                isActive = "Not Active";
+            }
+
+            string k = "[Student: " + Name + "(" + Id + ")" + "," + getAge()+ " " + isActive + " student]";
 
             return k;
         }
