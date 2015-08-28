@@ -76,7 +76,7 @@ namespace Lab201
         {
             this.Name = N;
             this.StudentID = ID;
-            this.YearOfBirth = 1995;
+            this.YearOfBirth = Y;
             this.isActive = act;
         }
 
