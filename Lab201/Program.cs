@@ -1,14 +1,14 @@
 using System;
 
-namespace Lab2
+namespace Lab201
 {
 	class MainClass
 	{
 		public static void Main (string[] args)
 		{
-			/* Testing the Student class */
-			Student[] stds = new Student[7];
-			stds[0] = new Student ();
+            /* Testing the Student class */
+            Student[] stds = new Student[7];
+            stds[0] = new Student ();
 			stds[1] = new Student ("s1","57001");
 			stds[2] = new Student ("s2","57002",1994);
 			stds[3] = new Student ("s3","57003",1996);
@@ -21,12 +21,12 @@ namespace Lab2
 				Console.WriteLine (s);
 
 			Console.WriteLine ("\n--- Playing with s4, s5, s6 objects ---");
-			stds [4].Name = "Mario";
-			stds [5].YearOfBirth = 1900;
-			stds [6].isActive = false;
+			stds [4].name = "Mario";
+			stds [5].years = 1900;
+			stds [6].isactive = false;
 			for (int i = 4; i < stds.Length; i++)
 				Console.WriteLine (stds [i]);
-
-		}
+            Console.ReadKey();
+        }
 	}
 }
