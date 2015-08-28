@@ -27,7 +27,7 @@ namespace Lab201
                 }
                 else
                 {
-                    Console.WriteLine("error try setting invalid year-of-birth value");
+                    Console.WriteLine(Id+" error try setting invalid year-of-birth value");
                 }
             }
         }
@@ -54,19 +54,22 @@ namespace Lab201
         {
             this.Name = "John Doe";
             this.Id = "(Unknow)";
-            this.YearOfBirth = 20;
+            this.YearOfBirth = 1995;
             this.isActive = false;
         }
         public Student(string name, string id)
         {
             this.Name = name;
             this.Id = id;
+            this.YearOfBirth = 1995;
+            this.isActive = true;
         }
         public Student(string name, string id, int year)
         {
             this.Name = name;
             this.Id = id;
             this.YearOfBirth = year;
+            this.isActive = true;
         }
         public Student(string name, string id, int year, bool active)
         {
@@ -83,17 +86,17 @@ namespace Lab201
 
         public override string ToString()
         {
-            string isActive = "";
-            if (_active == true)
+            string active = "";
+            if (isActive == true)
             {
-                isActive = "Active";
+                active = "Active";
             }
             else
             {
-                isActive = "Not Active";
+               active = "Not Active";
             }
 
-            string k = "[Student: " + Name + "(" + Id + ")" + "," + getAge()+ " " + isActive + " student]";
+            string k = "[Student: " + Name + "(" +Id + ")," + "age:" + getAge()+ ", " + active + " student]";
 
             return k;
         }
