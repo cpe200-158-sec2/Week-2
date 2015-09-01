@@ -54,6 +54,7 @@ namespace Lab201
             this.years = 1995;
             this.isactive = false;
         }
+
         public Student(string na, string id)
         {
             this.name = na;
