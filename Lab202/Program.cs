@@ -1,6 +1,6 @@
 using System;
 
-namespace Lab2
+namespace Lab202
 {
 	class MainClass
 	{
@@ -9,7 +9,7 @@ namespace Lab2
 			/* Testing the Course class */
 			Course cpe200 = new Course ("Object-Oriented Programming", "261300");
 			Course isne103 = new Course ("Programming Language for ISNE", "269103", "DOME");
-			Course cpe453 = new Course ("DIP", "261105", "Dr. Kenneth Cosh", 60);
+			Course cpe453 = new Course ("DIP", "261105", "Dr. Kenneth Cosh",0,60);
 
 			Console.WriteLine ("\n--- Initial Courses state ---");
 			Console.WriteLine (cpe200);

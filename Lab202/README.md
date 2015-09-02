@@ -32,6 +32,7 @@ The result should be similar to the output given as follows:
 261200: error try setting invalid CourseID!
 261200: error try setting invalid CourseID!
 261200: error try setting invalid No. Students!
+
 [Course: Object-Oriented Programming (261200), Lecturer=staff, has 0 students, max=30]
 [Course: Object-Oriented Programming (261200), Lecturer=staff, has 0 students, max=60]
 [Course: Object-Oriented Programming (261200), Lecturer=staff, has 40 students, max=60]
