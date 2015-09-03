@@ -31,22 +31,39 @@ namespace Lab202
         }
         public string CourseID
         {
-            //
+            
             get { return _CourseID; }
-            set { _CourseID = value; }
+            set { int i = 0;
+                while (i < value.Length) {
+                    if (value[i] < 48 || value[i] > 57)
+                    {
+                        Console.WriteLine("{0},error try setting invalid CourseID,this.CourseID");
+                    }
+                    break;
+                }
+                i++;
+                if (value.Length != 6)
+                {
+                    Console.WriteLine("{0},eror try setting invalid CourseID,this.CourseID");
+                }
+                else
+                {
+                    _CourseID = value;
+                }
+            }
         }
         public int MaxStudents
         {
-            get { return _MaxStudents}
+            get { return _MaxStudents; }
             set
             {
-                if (value >= 0 && value <= MaxStudents)
+                if (value >= 0 && value >= NumStudents)
                 {
                     _MaxStudents = value;
                 }
                 else
                 {
-                    Console.Write("error")
+                    Console.Write("30");
                 }
             }
         }
@@ -55,13 +72,13 @@ namespace Lab202
             get { return _NumStudents; }
             set
             {
-                if (value > 0 && value <= 80 && value >= MaxStudents)
+                if (value > 0 && value <= 80 && value <= MaxStudents)
                 {
                     _NumStudents = value;
                 }
                 else
                 {
-                    Console.Write("error");
+                    Console.Write("0");
                 }
             }
         }
@@ -70,18 +87,18 @@ namespace Lab202
 
         public Course()
         {
-            this.Name = "xxx";
-            this.Lecture = " YYY";
-            this.CourseID = "000000";
-            this.MaxStudents = 0;
+            this.Name = "";
+            this.Lecture = "staff";
+            this.CourseID = "0";
+            this.MaxStudents = 30;
             this.NumStudents = 0;
         }
         public Course (string n,string c)
         {
             this.Name = "n";
-            this.Lecture = "YYY";
+            this.Lecture = "staff";
             this.CourseID = "c";
-            this.MaxStudents = 0;
+            this.MaxStudents = 30;
             this.NumStudents = 0;
         }
         public Course (string n,string c,string l)
@@ -89,7 +106,7 @@ namespace Lab202
             this.Name = "n";
             this.Lecture = "l";
             this.CourseID = "c";
-            this.MaxStudents = 0;
+            this.MaxStudents = 30;
             this.NumStudents = 0;
         }
         public Course (string n, string c,string l,int m)
@@ -100,5 +117,12 @@ namespace Lab202
             this.MaxStudents = m;
             this.NumStudents = 0;
         }
+        public override string ToString()
+        {
+            return "[Course:" + Name + "(" + CourseID + "), Lecturer=" 
+                + Lecture + "has " + NumStudents + " students, Max=" + MaxStudents + "]"; 
+        }
+
+       // [Course: Object-Oriented Programming(261200), Lecturer=staff, has 0 students, max=30]
     }
 }
