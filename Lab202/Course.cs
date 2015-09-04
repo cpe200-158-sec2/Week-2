@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab2 
+namespace Lab2
 {
     class Course
     {
-        private string _lecturer= "staff";
+        private string _lecturer = "staff";
         private string _name = "Unknow";
         private string _courseID = "Unknow";
         private int _maxStudents = 30;
@@ -16,27 +16,27 @@ namespace Lab2
 
         public Course()
         {
-           
+
         }
-        public Course(string name,string courseID)
+        public Course(string name, string courseID)
         {
-           Name = name;
+            Name = name;
             CourseID = courseID;
         }
-        public Course(string name, string courseID,string lecturer)
+        public Course(string name, string courseID, string lecturer)
         {
             Lecturer = lecturer;
             Name = name;
             CourseID = courseID;
         }
-        public Course(string name,string courseID, string lecturer,int maxStudent)
+        public Course(string name, string courseID, string lecturer, int maxStudent)
         {
             Lecturer = lecturer;
             Name = name;
             CourseID = courseID;
             MaxStudents = maxStudent;
         }
-        public string Name 
+        public string Name
         {
             get { return _name; }
             set
@@ -49,21 +49,21 @@ namespace Lab2
             get { return _courseID; }
             set
             {
-                if (value.Length != 6) Console.WriteLine("{0}: error try setting invalid CourseID!",CourseID);
+                if (value.Length != 6) Console.WriteLine("{0}: error try setting invalid CourseID!", CourseID);
                 else
                 {
                     int i;
-                    for (i=0;i<6;i++)
+                    for (i = 0; i < 6; i++)
                     {
                         if (!char.IsNumber(value[i]))
                         {
                             break;
                         }
                     }
-                    if(i<6) Console.WriteLine("{0}: error try setting invalid CourseID!",CourseID);
+                    if (i < 6) Console.WriteLine("{0}: error try setting invalid CourseID!", CourseID);
                     else _courseID = value;
-                } 
-                
+                }
+
             }
         }
         public string Lecturer
@@ -76,12 +76,12 @@ namespace Lab2
         }
         public int NumStudents
         {
-            get {return _numStudents; }
+            get { return _numStudents; }
             set
             {
-                if (value>MaxStudents)
+                if (value > MaxStudents || value < 0)
                 {
-                    Console.WriteLine("{0}: error try setting invalid No. Students!",CourseID);
+                    Console.WriteLine("{0}: error try setting invalid No. Students!", CourseID);
                 }
                 else _numStudents = value;
             }
@@ -91,7 +91,7 @@ namespace Lab2
             get { return _maxStudents; }
             set
             {
-                if (value < NumStudents||value > 80)
+                if (value < NumStudents || value > 80 || value < 0)
                 {
                     Console.WriteLine("{0}: error try setting invalid Max No. Students!", CourseID);
                 }
@@ -99,8 +99,8 @@ namespace Lab2
             }
         }
         public override string ToString()
-        {  //[Course: Object-Oriented Programming (261300), Lecturer=staff, has 0 students, max=30]
-            return string.Format("[Course: {0} ({1}), Lecturer={2}, has {3} students, max={4}]", Name, CourseID, Lecturer, NumStudents, MaxStudents );
+        {
+            return string.Format("[Course: {0} ({1}), Lecturer={2}, has {3} students, max={4}]", Name, CourseID, Lecturer, NumStudents, MaxStudents);
         }
     }
 }
