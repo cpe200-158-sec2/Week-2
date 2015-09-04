@@ -91,7 +91,7 @@ namespace Lab2
             get { return _maxStudents; }
             set
             {
-                if (value < NumStudents)
+                if (value < NumStudents||value > 80)
                 {
                     Console.WriteLine("{0}: error try setting invalid Max No. Students!", CourseID);
                 }
