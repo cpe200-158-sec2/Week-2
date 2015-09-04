@@ -1,13 +1,13 @@
 using System;
 
-namespace Lab2
+namespace Lab202
 {
 	class MainClass
 	{
 		public static void Main (string[] args)
 		{
 			/* Testing the Course class */
-			Course cpe200 = new Course ("Object-Oriented Programming", "261300");
+			Course cpe200 = new Course ("Object-Oriented Programming","261300");
 			Course isne103 = new Course ("Programming Language for ISNE", "269103", "DOME");
 			Course cpe453 = new Course ("DIP", "261105", "Dr. Kenneth Cosh", 60);
 
@@ -37,9 +37,11 @@ namespace Lab2
 			Console.WriteLine ("\n--- playing with cpe453 object ---");
 			cpe453.Name = "Digital Image Processing";
 			cpe453.CourseID = "261453";
-			cpe453.Lecturer = "Sansanee";
+			cpe453.Lecture = "Sansanee";
 			cpe453.MaxStudents = 20;
 			Console.WriteLine (cpe453);
+
+            Console.ReadKey();
 
 		}
 	}
