@@ -1,5 +1,6 @@
 using System;
 
+
 namespace Lab2
 {
 	class MainClass
@@ -43,4 +44,5 @@ namespace Lab2
 
 		}
 	}
+
 }
