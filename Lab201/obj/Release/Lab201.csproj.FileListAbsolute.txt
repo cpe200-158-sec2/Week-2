@@ -1,0 +1,5 @@
+C:\Users\tunas\Source\Repos\Week-2\Lab201\bin\Release\Lab201.exe
+C:\Users\tunas\Source\Repos\Week-2\Lab201\bin\Release\Lab201.pdb
+C:\Users\tunas\Source\Repos\Week-2\Lab201\obj\Release\Lab201.exe
+C:\Users\tunas\Source\Repos\Week-2\Lab201\obj\Release\Lab201.pdb
+C:\Users\tunas\Source\Repos\Week-2\Lab201\obj\Release\Lab201.csprojResolveAssemblyReference.cache
