@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab202
 {
-    //  Creates Course class in a separate file, e.g. "Course.cs", and implements it to satisfy the following requirements:
-    //- Properties: Name, CourseID, Lecturer, MaxStudents, NumStudents
-    //   Validation: CourseID(6-digit number only), 
-    //           NumStudents(0-MaxStudents)
-    //             MaxStudents(0-80, and >= NumStudents)
+
     class Course
     {
         private string _Name;
@@ -36,7 +32,7 @@ namespace Lab202
             set
             {
 
-                bool num =true ;
+                bool num = true;
                 for (int i = 0; i < value.Length; i++)
                 {
 
@@ -47,11 +43,10 @@ namespace Lab202
                     }
 
                 }
-               
 
-                if (value.Length != 6 || num == true)
+                if (value.Length != 6 || num == false)
                 {
-                    Console.WriteLine("{0}: error try setting invalid CourseID,this.CourseID", value);
+                    Console.WriteLine("{0}: error try setting invalid CourseID,this.CourseID", CourseID);
                 }
                 else
                 {
@@ -80,18 +75,18 @@ namespace Lab202
             get { return _NumStudents; }
             set
             {
-                if (value > 0 && value <= 80 && value <= MaxStudents)
+                if (value > 0 && value <= MaxStudents)
                 {
                     _NumStudents = value;
                 }
                 else
                 {
-                    Console.Write("");
+                    Console.WriteLine("{0}: error try setting invalid No. Students!",CourseID);
                 }
             }
         }
 
-        // [Course: Programming Language for ISNE(269103), Lecturer=DOME, has 0 students, max=30]
+        
 
         public Course()
         {
@@ -128,8 +123,9 @@ namespace Lab202
         public override string ToString()
         {
 
-            return "[Course:" + Name + "(" + CourseID + "), Lecturer="
-                + Lecture + " has " + NumStudents + " students, Max=" + MaxStudents + "]";
+            return 
+                "[Course:" + Name + "(" + CourseID + "), Lecturer="
+                + Lecture + " has " + NumStudents + " students, Max=" + MaxStudents + "],";
         }
 
         // [Course: Object-Oriented Programming(261200), Lecturer=staff, has 0 students, max=30]
