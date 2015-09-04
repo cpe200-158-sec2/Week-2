@@ -45,7 +45,7 @@ namespace Lab2
             _active = true;
         }
 
-        public String Name
+        public string Name
         {
 
             get
