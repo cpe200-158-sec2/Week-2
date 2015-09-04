@@ -7,7 +7,7 @@ namespace Lab202
 		public static void Main (string[] args)
 		{
 			/* Testing the Course class */
-			Course cpe200 = new Course ("Object-Oriented Programming", "261300");
+			Course cpe200 = new Course ("Object-Oriented Programming","261300");
 			Course isne103 = new Course ("Programming Language for ISNE", "269103", "DOME");
 			Course cpe453 = new Course ("DIP", "261105", "Dr. Kenneth Cosh", 60);
 
@@ -40,6 +40,8 @@ namespace Lab202
 			cpe453.Lecture = "Sansanee";
 			cpe453.MaxStudents = 20;
 			Console.WriteLine (cpe453);
+
+            Console.ReadKey();
 
 		}
 	}
