@@ -19,6 +19,7 @@ namespace Lab202
             get { return _name; }
             set { _name = value; }
         }
+
         public string CourseID
         {
             get { return _courseid; }
@@ -47,11 +48,13 @@ namespace Lab202
                 }
             }
         }
+
         public string Lecturer
         {
             get { return _lecturer; }
             set { _lecturer = value; }
         }
+
         public int MaxStudents
         {
             get { return _max; }
@@ -67,6 +70,7 @@ namespace Lab202
                     }
             }
         }
+
         public int NumStudents
         {
             get { return _num; }
@@ -91,6 +95,7 @@ namespace Lab202
             _max = 30;
             _num = 0;
         }
+
         public Course(string entername, string entercourseid)
         {
             this.Name = entername;
@@ -99,6 +104,7 @@ namespace Lab202
             _max = 30;
             _num = 0;
         }
+
         public Course(string entername, string entercourseid, string enterlecturer)
         {
             this.Name = entername;
@@ -107,6 +113,7 @@ namespace Lab202
             _max = 30;
             _num = 0;
         }
+
         public Course(string entername, string entercourseid, string enterlecturer, int entermaxstudents)
         {
             this.Name = entername;
