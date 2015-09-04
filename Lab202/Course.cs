@@ -49,7 +49,7 @@ namespace Lab2
             get { return _courseID; }
             set
             {
-                if (value.Length > 6) Console.WriteLine("{0}: error try setting invalid CourseID!",CourseID);
+                if (value.Length != 6) Console.WriteLine("{0}: error try setting invalid CourseID!",CourseID);
                 else
                 {
                     int i;
