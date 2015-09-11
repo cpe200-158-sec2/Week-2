@@ -1,0 +1,4 @@
+C:\Users\Dell\Source\Repos\Week-2\Lab201\bin\Debug\Lab201.exe
+C:\Users\Dell\Source\Repos\Week-2\Lab201\bin\Debug\Lab201.pdb
+C:\Users\Dell\Source\Repos\Week-2\Lab201\obj\Debug\Lab201.exe
+C:\Users\Dell\Source\Repos\Week-2\Lab201\obj\Debug\Lab201.pdb
