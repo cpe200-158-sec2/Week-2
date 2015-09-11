@@ -1,0 +1,5 @@
+C:\Users\Dell\Source\Repos\Week-2\Lab202\bin\Release\Lab202.exe
+C:\Users\Dell\Source\Repos\Week-2\Lab202\bin\Release\Lab202.pdb
+C:\Users\Dell\Source\Repos\Week-2\Lab202\obj\Release\Lab202.exe
+C:\Users\Dell\Source\Repos\Week-2\Lab202\obj\Release\Lab202.pdb
+C:\Users\Dell\Source\Repos\Week-2\Lab202\obj\Release\Lab202.csprojResolveAssemblyReference.cache
