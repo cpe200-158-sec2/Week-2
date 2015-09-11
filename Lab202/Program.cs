@@ -22,7 +22,7 @@ namespace Lab28
 			Console.WriteLine (cpe200);
 			cpe200.CourseID = "2612OO";
 			cpe200.CourseID = "2612002";
-             
+              
 			cpe200.NumStudents = 40;
 			Console.WriteLine (cpe200);
 			cpe200.MaxStudents = 60;
