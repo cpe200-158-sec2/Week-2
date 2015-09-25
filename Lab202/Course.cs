@@ -1,91 +1,113 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab2
+namespace Lab202
 {
-    class Student
+    class Course
     {
-        //Properties set to private.   
+        //Properties
+        private string Name;
+        private string CourseID;
+        private string Lecturer;
+        private int MaxStudents;
+        private int NumStudents;
 
-        private string _Name;
-        private string _StudentID;
-        private int _YearOfBirth;
-        private bool _isActive;
+        public string _Name
+        {
+            get { return Name; }
+            set { Name = value; }
+        }
 
-        public string Name
+        public string _CourseID //CourseID (6-digit number only)            
         {
-            get { return _Name; }
-            set { _Name = value; }
-        }
-        public string StudentID
-        {
-            get { return _StudentID; }
-            set { _StudentID = value; }
-        }
-        public int YearOfBirth
-        {
-            get { return _YearOfBirth; }
+            get { return CourseID; }
             set
             {
-                if (value < 1950 || value > 2000)
+                bool check = true;
+                foreach (char idCourse in _CourseID)
                 {
-                    Console.WriteLine("({0}): error try setting invalid year - of - birth value!", _StudentID);
+                    if (!Char.IsDigit(idCourse))
+                        check = false;
                 }
-                _YearOfBirth = value;
+                if (value.Length != 6 || check == true) Console.WriteLine("{0}: error try setting invalid CourseID!", CourseID);
+                else CourseID = value;
             }
         }
-        public bool isActive
+
+        public string _Lecturer
         {
-            get { return _isActive; }
-            set { _isActive = value; }
+            get { return _Lecturer; }
+            set { Lecturer = value; }
+        }
+
+        public int _MaxStudents //MaxStudents(0-80, and >= NumStudents)
+        {
+            get { return MaxStudents; }
+            set
+            {
+                if (value < NumStudents)
+                    Console.WriteLine("{0}: error try setting invalid Max No. Students!", CourseID);
+                else MaxStudents = value;
+            }
+        }
+
+        public int _NumStudents //NumStudents(0-MaxStudents)
+        {
+            get { return NumStudents; }
+            set
+            {
+                if (value > MaxStudents)
+                    Console.WriteLine("{0}: error try setting invalid No. Students!", CourseID);
+                else NumStudents = value;
+            }
         }
 
 
         //Constructors
-
-        public Student()
+        //Course() : set default state
+        public Course()
         {
-            _Name = "John Doe";
-            _StudentID = "(Unknown)";
-            _YearOfBirth = 1995;
-            _isActive = false;
+            Name = "Unknow";
+            CourseID = "Unknow";
+            Lecturer = "staff";
+            MaxStudents = 30;
         }
-        public Student(string Name, string StudentID)
+        //Course(Name, CourseID): takes 2 parameters
+        public Course(string n, string cid)
         {
-            _Name = Name;
-            _StudentID = StudentID;
-            _YearOfBirth = 1995;
-            _isActive = true;
-        }
-        public Student(string Name, string StudentID, int YearOfBirth)
-        {
-            _Name = Name;
-            _StudentID = StudentID;
-            _YearOfBirth = YearOfBirth;
-            _isActive = true;
-        }
-        public Student(string Name, string StudentID, int YearOfBirth, bool isActive)
-        {
-            _Name = Name;
-            _StudentID = StudentID;
-            _YearOfBirth = YearOfBirth;
-            _isActive = isActive;
+            Name = n;
+            CourseID = cid;
+            Lecturer = "Staff";
+            MaxStudents = 30;
         }
 
-
-        //Method 
-
-        public int getAge()
+        //Course(Name, CourseID, Lecturer): takes 3 parameters
+        public Course(string n, string cid, string lec)
         {
-            return 2015 - _YearOfBirth;
+            Name = n;
+            CourseID = cid;
+            Lecturer = lec;
+            MaxStudents = 30;
         }
+        //Course(Name, CourseID, Lecturer, MaxStudents): takes 4 parameters
+        public Course(string n, string cid, string lec, int maxs)
+        {
+            Name = n;
+            CourseID = cid;
+            Lecturer = lec;
+            MaxStudents = maxs;
+        }
+
+        //Methods
+        //ToString(): display object state in specify format (see expected output)
         public override string ToString()
         {
-            return string.Format("[Student: {0} ({1}),age = {2}, is {3} student]", _Name, _StudentID, _YearOfBirth, (_isActive == true) ? "Active" : "NOT active");
+            //[Course: Object-Oriented Programming (261300), Lecturer=staff, has 0 students, max=30]
+            return string.Format("[Course: {0} ({1}), Lecturer={2}, has {3} students, max={4}]", Name, CourseID, Lecturer, NumStudents, MaxStudents);
         }
-
     }
 }
