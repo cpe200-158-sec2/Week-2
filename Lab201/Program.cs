@@ -1,6 +1,6 @@
 using System;
 
-namespace Lab2
+namespace Student
 {
 	class MainClass
 	{
@@ -21,12 +21,12 @@ namespace Lab2
 				Console.WriteLine (s);
 
 			Console.WriteLine ("\n--- Playing with s4, s5, s6 objects ---");
-			stds [4].Name = "Mario";
-			stds [5].YearOfBirth = 1900;
-			stds [6].isActive = false;
+			stds [4].setName("Mario");
+			stds [5].setYob(1900);
+			stds [6].setActive(false);
 			for (int i = 4; i < stds.Length; i++)
 				Console.WriteLine (stds [i]);
-
+			Console.ReadLine();
 		}
 	}
 }
