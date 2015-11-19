@@ -1,104 +1,34 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+ 
 
 namespace Lab201
-{
-    class Student
-    {
-        private string _name;
-        private string _studentid;
-        private int _yearofbirth;
-        private bool _isactive;
+ {
+ 	class MainClass
+ 	{
+ 		public static void Main (string[] args)
+ 		{
 
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-
-        public string StudentID
-        {
-            get { return _studentid; }
-            set { _studentid = value; }
-        }
-
-        public int YearOfBirth
-        {
-            get { return _yearofbirth; }
-            set
-            {
-                if (value < 1950 || value > 2000)
-                {
-                    Console.WriteLine("{0} : error try setting invalid year-of-birth value!", StudentID);
-                    //throw new OverflowException() ;
-                }
-                else
-                {
-                    _yearofbirth = value;
-                }
-            }
-        }
-
-        public bool isActive
-        {
-            get { return _isactive; }
-            set { _isactive = value; }
-        }
-
-        public Student()
-        {
-            this.Name = "John Doe";
-            this.StudentID = "Unknown";
-            this.YearOfBirth = Y;
-            this.isActive = false;
-        }
-
-        public Student(string N, string ID)
-        {
-            this.Name = N;
-            this.StudentID = ID;
-            this.YearOfBirth = 1995;
-            this.isActive = true;
-        }
-
-        public Student(string N, string ID, int Y)
-        {
-            this.Name = N;
-            this.StudentID = ID;
-            this.YearOfBirth = Y;
-            this.isActive = true;
-        }
-
-        public Student(string N, string ID, int Y, bool act)
-        {
-            this.Name = N;
-            this.StudentID = ID;
-            this.YearOfBirth = 1995;
-            this.isActive = act;
-        }
-
-        public int getAge()
-        {
-            return 2015 - YearOfBirth;
-        }
-
-        public override string ToString()
-        {
-            string active = " ";
-            if (isActive==true )
-            {
-                active = "active";
-            }
-            else
-            {
-                active = "NOT active";
-            }
-            string s = "[Student: " + Name + " ("+ StudentID  +"), age="+ getAge()  +", is " + active + " student]";
-            return s;
-        }
-
-    }
-}
+ 			Student[] stds = new Student[7];
+ 			stds[0] = new Student ();
+ 			stds[1] = new Student ("s1","57001");
+ 			stds[2] = new Student ("s2","57002",1994);
+ 			stds[3] = new Student ("s3","57003",1996);
+ 			stds[4] = new Student ("s4","57004");
+ 			stds[5] = new Student ("s5","57005",1993);
+ 			stds[6] = new Student ("s6","57006");
+ 
+ 			Console.WriteLine ("\n--- Initial Students' state ---");
+ 			foreach (Student s in stds)
+ 				Console.WriteLine (s);
+ 
+ 			Console.WriteLine ("\n--- Playing with s4, s5, s6 objects ---");
+ 			stds [4].Name = "Mario";
+ 			stds [5].YearOfBirth = 1900;
+ 			stds [6].isActive = false;
+ 			for (int i = 4; i < stds.Length; i++)
+ 				Console.WriteLine (stds [i]);
+ 
+            Console.ReadKey();
+ 		}
+ 	}
+ }
